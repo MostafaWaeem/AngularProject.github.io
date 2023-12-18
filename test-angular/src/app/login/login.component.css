@@ -1,0 +1,36 @@
+
+.login-inputs input:not(:first-child) {
+  margin-top: 20px;
+}
+.login-inputs {
+  margin-bottom: 94px;
+}
+
+.login-inputs input{
+  width: 200px;
+  outline: none;
+  border: none;
+  padding: 6px 0;
+  padding-left: 6px;
+  border-radius: 6px;
+}
+
+.sub-div {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  color: red;
+  font-size: 20px;
+}
+
+ span{
+  color: rgb(175, 89, 8);
+}
+
+
+.true {
+  color: green;
+  font-size: 20px;
+}

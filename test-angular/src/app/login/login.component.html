@@ -1,0 +1,35 @@
+<div class="box box2">
+  <h1>{{ 'Login' | translate }}</h1>
+  <div class="login-inputs">
+    <form class="example-form" [formGroup]="LoginForm">
+      <mat-form-field class="example-full-width">
+        <input matInput #name placeholder="{{'* '}}{{ 'Enter Your Name' | translate }}" formControlName="name">
+      </mat-form-field>
+      <p class="error" *ngIf="LoginForm.get('name')?.hasError('required')"><span>*</span>{{'Name Is Requerd' |
+        translate}}</p>
+      <br>
+      <p class="error" *ngIf="LoginForm.get('name')?.hasError('minLength')"><span>*</span>{{'Name Max minLength is 3' |
+        translate}}</p>
+      <p class="true" *ngIf="!LoginForm.get('name')?.errors">{{"Name Is Valid" | translate}}</p>
+      <br>
+      <mat-form-field class=" example-full-width">
+        <input #password matInput placeholder="{{'* '}}{{ 'Enter Your Password' | translate }}"
+          formControlName="password">
+      </mat-form-field>
+      <p class="error" *ngIf="LoginForm.get('password')?.hasError('required')"><span>*</span> {{'Password Is Requerd' |
+        translate}}</p>
+      <pre class="error" *ngIf="LoginForm.get('password')?.hasError('pattern')"><span>*</span>{{'Make You Password Strong' | translate}}
+      </pre>
+      <p class="true" *ngIf="!LoginForm.get('password')?.errors">{{'password Is Valid'| translate}}</p>
+      <div class="sub-div">
+        <button [disabled]="LoginForm.invalid" mat-stroked-button (click)="sendToServer(name.value , password.value)"
+          color="primary" type="button">{{'Login' |
+          translate}}</button>
+      </div>
+
+      <h3 *ngIf="messageValid" style="color: green;">
+        * {{ message }} .
+      </h3>
+    </form>
+  </div>
+</div>

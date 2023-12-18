@@ -1,0 +1,18 @@
+{
+  "Home" :"الصفحه الرئيسيه",
+  "Login" :"تسجيل الدخول",
+  "LogOut" :"تسجيل الخروج",
+  "Post" : "رفع",
+  "Delete" : "حذف",
+  "Put" : "وضع",
+  "Get" : "احضار",
+  "OpenPopup" : "افتح النافذة المنبثقة",
+  "Popup" : "افتح النافذة المنبثقة",
+  "Enter Your Name": "اكتب اسمك",
+  "Enter Your Password": "اكتب كلمه السر",
+  "Password Is Requerd": "يجب عليك ادخال الباسورد",
+  "Name Is Requerd": "يجب عليك ادخال الاسم",
+  "Make You Password Strong": "ادخل باسورد قوي",
+  "Name Is Valid": "الاسم صحيح",
+  "password Is Valid": "الباسورد صحيح"
+}

@@ -1,0 +1,29 @@
+<mat-icon class="menu-btn" (click)="click()">menu</mat-icon>
+
+<div class=" menu">
+  <button routerLink='' mat-raised-button color="primary">
+    {{'Home' | translate}}
+  </button>
+
+  <button routerLink='login' mat-raised-button color="primary">
+    {{'Login' | translate}}
+  </button>
+
+  <button routerLink='popup' mat-raised-button color="primary">
+    {{'OpenPopup' | translate}}
+  </button>
+
+  <button (click)="logOut()" mat-raised-button color="primary">
+    {{'LogOut' | translate}}
+  </button>
+  <button (click)="translate.use('en')" mat-raised-button color="accent">
+    En
+  </button>
+  <button (click)="translate.use('ar')" mat-raised-button color="accent">
+    Ar
+  </button>
+  <hr />
+</div>
+<main [@routing]="outletRef.isActivated? outletRef.activatedRoute :''">
+  <router-outlet #outletRef="outlet"></router-outlet>
+</main>
